@@ -181,17 +181,17 @@ body {
 	width:100%;
 }
 
-#containter {
-   margin:.5em;
+#page {
+	margin:.5em;
+	width:600px;
+	position:relative;
+	left:50%;
+	margin-left:-300px;
+	text-align:center;
 }
 
 
 #main {
-	margin-top:2.5em;
-	width:500px;
-	position:relative;
-	left:50%;
-	margin-left:-250px;
 }
 /*general size and other styles*/
 	
@@ -213,7 +213,6 @@ p {
 	line-height:1.4em;
 	color:#777;
 	margin:1em 0;
-	width:470px;
 }
 
 
@@ -225,118 +224,7 @@ em {
 	font-style:italic;
 }
 
-.date{
-	font-size:2em;
-	font-family: 'Buda', arial, serif;
-}
-/*headers and nav*/
 
-header h1 { font-family: 'Buda', arial, serif; }
-
-header#home {
-	position:absolute;
-	width:100px;
-	left:-35px;
-	top:-50px;
-	font-size:2.2em;
-}
-
-#home h1 .turn {
-	left:-50px;
-	top:95px;
-	position:absolute;
-	-webkit-transform: rotate(270deg); 
-	-moz-transform: rotate(270deg);
-	transform: rotate(270deg);
-}
-#home h1 .small {
-	font-size:.4em;
-}
-
-
-nav {
-
-}
-
-nav.short  {
-	position:absolute;
-	right:-120px;
-	top:0px;
-	border:2px solid #777;
-	border-radius:8px;
-	width:90px;
-	padding:10px;
-}
-
-nav li.active {
-	opacity:.3;
-	-webkit-transition:all 1s ease-in-out;  
-   -moz-transition:all 1s ease-in-out;  
-   -o-transition:all 1s ease-in-out;  
-   transition:all 1s ease-in-out;  
-}
-
-nav.short:hover li.active {
-	opacity:1;
-} 
-
-
-nav.short .date {
-	font-size:1.3em;
-	width:200px;
-	display:block;
-}
-
-
-nav.description {
-	font-family: 'Buda', arial, serif;
-	padding:10px;
-	margin:.5em;
-	width:470px;
-}
-
-nav.description h3{
-	float:right;
-	line-height:2em;
-	font-style:italic;
-	text-transform:uppercase;
-}
-
-
-nav.description li {
-	border-bottom:3px solid #777;
-}
-
-nav p.description {
-	display:block;
-	font-size:1.2em;
-	margin:.2em;
-}
-
-nav ul li {
-    list-style-type:none;
-}
-/*all the blog article stuff*/
-
-article {
-	position:relative;
-	border-top:3px solid #777;
-	border-bottom:3px solid #777;
-	padding:10px 5px;
-	margin:2em .5em;
-	width:600px;
-}
-
-
-section header {
-	margin:.5em .8em 1em 2em;
-	text-align:right;
-	width:575px;
-}
-
-section p{
-	width:575px;
-}
 
 
 /**
