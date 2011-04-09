@@ -1,0 +1,15 @@
+---
+layout: post
+title: A temporary test Post.
+
+description: The first post of my the blog. This will be replaced with a more real post eventually
+
+---
+
+#Welcome
+
+Welcome to the blog of Jill Kaplan Photography. You have managed to find the very first post.
+
+##Introduction
+
+Go photography

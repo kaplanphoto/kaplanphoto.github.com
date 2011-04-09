@@ -1,0 +1,15 @@
+markdown: rdiscount
+pygments: true
+permalink: /:month/:year/:title
+
+home_url: http://jill.kaplanphoto.me
+blog_url: http://jill.kaplanphoto.me
+#home_url: /
+#blog_url: /
+
+root_desc: "jill.kaplanphoto.me"
+description: "The home of Jill Kaplan Photography on the web."
+
+auto: true
+rdiscount:
+  extensions: [smart]
