@@ -166,8 +166,10 @@ color: #607890;
 }
 
 a:hover {
- color: #c00;
+ color: #a72d1e;
 }
+
+
 
 
 /**
@@ -183,21 +185,18 @@ body {
 
 #page {
 	margin:.5em;
-	width:600px;
 	position:relative;
-	left:50%;
-	margin-left:-300px;
 	text-align:center;
 }
 
 
 #main {
+padding-top:30px;
 }
 /*general size and other styles*/
 	
 h1 {
-    font-size:1.7em;
-}
+    font-size:1.7em;}
 
 h2 {
 	font-size:1.5em;
@@ -224,9 +223,230 @@ em {
 	font-style:italic;
 }
 
+canvas,img {  
+	box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   inset 8px 10px 10px rgba(255,255,255,0.75);
+   -o-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   inset 8px 10px 10px rgba(255,255,255,0.75);
+   -webkit-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   inset 8px 10px 10px rgba(255,255,255,0.75);
+   -moz-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
+   inset 8px 10px 10px rgba(255,255,255,0.75);
+}
+img:hover {  
+ -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+	}
+
+ul.floated li {
+	display:inline-block;
+	padding:5px 10px;
+}
+
+/*main images - menu after click*/
+#main header a,#main .flip a {
+display:none;
+}
+
+#main a.visible {
+display:block;
+}
+
+#main.flipped a {
+display:block;
+}
+
+#main.flipped .flip img{
+display:none;
+}
+
+#main ul#imagenav img {
+	cursor:pointer;
+}
+
+ul#imagenav h1 a{
+	text-shadow: 0px 2px 3px #555;
+	font-family: 'Calligraffitti', arial, serif;
+	padding:5px 30px; 
+	opacity:.8;
+	font-size:4em;
+	letter-spacing:.05em;
+	font-style:italic;
+	font-weight:bold;
+ text-decoration:none !important;
+ }
+
+ .flipped #imagenav li.flip {
+}
 
 
 
+/*home and nav*/
+#home {
+	width:100%;
+	height:auto;
+	padding:10px;
+	font-size:2em;
+   -webkit-transition: all 2s ease-in;
+    -moz-transition: all 2s ease-in;
+    -o-transition: all 2s ease-in;
+
+  }
+
+ #home:hover {
+ opacity:.7;
+ background-color: #fc3;
+}
+
+ #home h1 a{
+	color: #222;
+	text-shadow: 0px 2px 3px #555;
+	font-family: 'Calligraffitti', arial, serif;
+	padding:5px 30px; 
+	opacity:.8;
+	letter-spacing:.05em;
+}
+
+
+ #home h1 a:hover{
+ color: #a72d1e;
+}
+
+#home nav {
+	position:fixed;
+	top:0px;
+	width:60%;
+	margin:0 20% .3em;
+	opacity:.7;
+   -webkit-transition: all .1s 1s ease-in;
+    -moz-transition: all .1s 1s ease-in;
+    -o-transition: all .1s 1s ease-in;
+  }
+#home:hover nav {
+	opacity:1;
+}
+#home h3 {
+font-style:italic;
+font-family:'Neuton', arial, serif;
+font-size:1em;
+display:inline-block;
+padding:15px 30px;
+   -webkit-transition: all .1s 1s ease-in;
+    -moz-transition: all .1s 1s ease-in;
+    -o-transition: all .1s 1s ease-in;
+  }
+
+#home h3:hover {
+ -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+	}
+
+
+
+.flipped aside#hub footer {
+	position:absolute;
+	right:80px;
+	display:block;
+	text-align:right;
+	bottom:20px;
+}
+
+aside#hub {
+	text-align:left;
+	height:auto;
+	position:fixed;
+	width:100%;
+	margin-left:-20px;
+	bottom:0px;
+	background:grey;
+	padding:20px 20px 20px 40px;
+	z-index:5;
+}
+
+aside footer {
+	display:none;
+}
+
+/*isotope css stuff*/
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/* End: Recommended Isotope styles */
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+}
+
+#container {
+  border: 1px solid #666;
+  padding: 5px;
+  margin-bottom: 200px;
+}
+/**** Photo demo ****/
+
+.photos .photo {
+  max-width:300px;
+  margin: 5px;
+  float: left;
+}
+
+.photos .photo img {
+  display: block;
+  width: 100%;
+}
 /**
  * Non-semantic helper classes: please define your styles before this section.
  */

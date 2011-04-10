@@ -1,11 +1,15 @@
+name: Jill Kaplan Photography
 markdown: rdiscount
 pygments: true
-permalink: /:month/:year/:title
+permalink: /:categories/:title.html
+
 isotope_js: js/libs/jquery.isotope.min.js
 jquery_js: js/libs/jquery-1.5.1.min.js
 
-home_url: http://jill.kaplanphoto.me
+home_url: http://jill.kaplanphoto.me/
 #home_url: /
+gallery_url: http://jill.kaplanphoto.me/gallery.html
+#gallery_url: /
 
 root_desc: "jill.kaplanphoto.me"
 description: "The home of Jill Kaplan Photography on the web."

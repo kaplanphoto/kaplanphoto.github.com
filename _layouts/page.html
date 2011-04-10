@@ -4,21 +4,36 @@
   <div id="page">
 
     <div id="main" role="main">    
-	<header id="home"><h1>
-	<a href="{{ site.home_url }}">Jill Kaplan Photography</a>
-	</h1>
-    </header>
+
 
 	{{ content }}
 
 
-  </div>
 
+  <aside id="hub">
+	<header id="home">	<nav class="hidden" id="subpages">
+	<h3 class="">
+	<a href="{{ site.blog_url }}">Blog</a>
+	</h3>
+	<h3 class="">
+	<a href="{{ site.contact_url }}">Contact</a>
+	</h3>
+	<h3 class="">
+	<a href="{{ site.gallery_url }}">Gallery</a>
+	</h3>
+	</nav><h1>
+	<a class="visible" href="{{ site.home_url }}">Jill Kaplan Photography</a>
+	</h1>
+		<h3>Denver, Colorado</h3>
+		<h3><a href="{{ site.contact_url }}">Contact Jill</a></h3>
+    </header>
     <footer>
-	<p>Photos Copyright Jill Kaplan</p>
+	<h1>Jill Kaplan &copy;2011</h1>
 	<a href="http://joehand.org">Made by Hand</a>
-
     </footer>
+  </aside>
+
+  </div>
   </div> <!--! end of #page -->
 
 

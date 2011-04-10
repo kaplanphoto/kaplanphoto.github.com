@@ -1,0 +1,6 @@
+ <div class="photo {% for cat in photo.categories %}{{ cat }} {% endfor %} {% if page.infinite_scroll %} width2 height2 {% endif %}" data-name="{{ photo.name }}" data-category="{{ photo.categories[0] }}">
+      <p class="number">{{ photo.number }}</p>
+      <a target="_blank" href="http://min.us/mwebsite#{{ photo.number }}"><h2 class="name">{{ photo.name }}</h2></a>
+      <img src="{{ photo.file }}" alt="{{ photo.name }}"/>
+    </div>
+
