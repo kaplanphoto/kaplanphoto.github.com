@@ -22,6 +22,58 @@
       });
     
     
+
+	 var $sites = $('#sites'),
+          $sitesTitle = $('<h2 class="loading"><img src="http://i.imgur.com/qkKy8.gif" />Loading sites using Isotope</h2>'),
+          $sitesList = $('<ul class="clearfix"></ul>');
+          
+      $sites.append( $sitesTitle ).append( $sitesList );
+
+      $sitesList.isotope({
+        layoutMode: 'cellsByRow',
+        cellsByRow: {
+          columnWidth: 290,
+          rowHeight: 400
+        }
+      });
+      
+      var ajaxError = function(){
+        $sitesTitle.removeClass('loading').addClass('error')
+          .text('Could not load sites using Isotope :(');
+      };
+      
+      // dynamically load sites using Isotope from Ember app
+      $.getJSON('http://min.us/api/GetItems/mwebsite')
+        .error( ajaxError )
+        .success(function( data ){
+          
+          // proceed only if we have images
+          if ( !data.response || !data.response.ITEMS_GALLERY ) {
+            ajaxError();
+            return;
+          }
+          var images = data.response.ITEMS_GALLERY,
+              items = [],
+              item, image;
+          
+          for ( var i=0, len = images.length; i < len; i++ ) {
+            image = images[i];
+            item = '<li><a href="' + image + '">'
+              + '<img src="' + image + '" />'
+              + '</a></li>';
+            items.push( item );
+          }
+          
+          var $items = $( items.join('') );
+          
+          $items.imagesLoaded(function(){
+            $sitesTitle.removeClass('loading').text('Sites using Isotope');
+            $sitesList.isotope( 'insert', $items );
+          });
+          
+        });
+      
+      
     });
   </script>
   <!--[if lt IE 7 ]>

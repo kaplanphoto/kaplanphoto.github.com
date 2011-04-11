@@ -2,36 +2,42 @@
 {% include page_top.html %}
 
   <div id="page">
-
     <div id="main" role="main">    
+
+  <aside id="hub">
+	<header id="home">	<h1>
+	<a class="visible" href="{{ site.home_url }}">Jill Kaplan Photography</a>
+	</h1>
+		<h3>Denver, Colorado</h3>
+    </header>
+  </aside>
+
+	<nav class="" id="subpages">
+	<ul>
+	<li>
+	<h3 class="left">
+	<a href="{{ site.blog_url }}">Pics</a>
+	</h3>
+	</li><li>
+	<h3 class="top">
+	<a href="{{ site.contact_url }}">Bio</a>
+	</h3>
+	</li><li>
+	<h3 class="bottom">
+	<a href="{{ site.gallery_url }}">Blog</a>
+	</h3>
+	</li></ul>
+	</nav>
 
 
 	{{ content }}
 
 
-
-  <aside id="hub">
-	<header id="home">	<nav class="hidden" id="subpages">
-	<h3 class="">
-	<a href="{{ site.blog_url }}">Blog</a>
-	</h3>
-	<h3 class="">
-	<a href="{{ site.contact_url }}">Contact</a>
-	</h3>
-	<h3 class="">
-	<a href="{{ site.gallery_url }}">Gallery</a>
-	</h3>
-	</nav><h1>
-	<a class="visible" href="{{ site.home_url }}">Jill Kaplan Photography</a>
-	</h1>
-		<h3>Denver, Colorado</h3>
-		<h3><a href="{{ site.contact_url }}">Contact Jill</a></h3>
-    </header>
     <footer>
+		<h3><a href="{{ site.contact_url }}">Contact Jill</a></h3>
 	<h1>Jill Kaplan &copy;2011</h1>
 	<a href="http://joehand.org">Made by Hand</a>
     </footer>
-  </aside>
 
   </div>
   </div> <!--! end of #page -->

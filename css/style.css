@@ -166,7 +166,7 @@ color: #607890;
 }
 
 a:hover {
- color: #a72d1e;
+ color: rgba(169, 46, 30, 0.5);
 }
 
 
@@ -187,6 +187,9 @@ body {
 	margin:.5em;
 	position:relative;
 	text-align:center;
+	width:800px;
+	left:50%;
+	margin-left:-400px;
 }
 
 
@@ -224,6 +227,7 @@ em {
 }
 
 canvas,img {  
+
 	box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
    inset 8px 10px 10px rgba(255,255,255,0.75);
    -o-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
@@ -233,16 +237,17 @@ canvas,img {
    -moz-box-shadow: 8px 10px 10px rgba(0,0,0,0.5),
    inset 8px 10px 10px rgba(255,255,255,0.75);
 }
+
+canvas {
+	width:auto;
+	height:300px;
+}
 img:hover {  
  -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -o-transform: scale(1.05);
 	}
 
-ul.floated li {
-	display:inline-block;
-	padding:5px 10px;
-}
 
 /*main images - menu after click*/
 #main header a,#main .flip a {
@@ -277,16 +282,103 @@ ul#imagenav h1 a{
  text-decoration:none !important;
  }
 
- .flipped #imagenav li.flip {
+#imagenav li {
+list-style-type:none;
+float:left;
+}
+
+#imagenav li.flip {
+	display:block;
+	float:right;
+	padding:7px 0 5px 0;
 }
 
 
+/*nav on top and home bar on bottom */
 
-/*home and nav*/
+nav {
+	display:block;
+	position:relative;
+	width:300px;
+	right:0px;
+	font-size:2em;
+	height:200px;
+	top:0px;
+	margin-top:1em;
+   -webkit-transition: all .5s .5s ease-in;
+    -moz-transition: all .5s .5s ease-in;
+    -o-transition: all .5s .5s ease-in;
+	border: 5px solid rgba(255, 255, 255, 0.3);
+	border-radius:3px;
+	positioN:absolute;
+  }
+
+nav li a {
+text-align:right;
+font-family:'Neuton', arial, serif;
+  padding: 0.4em 0.5em;
+  background-color: rgba(43, 197, 218, 0.3);
+  font-weight: bold;
+  text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
+  background-image: -moz-linear-gradient(-90deg, 
+    hsla( 0, 0%, 100%, 0.5 ) , 
+    hsla( 0, 0%, 100%, 0.0 ) 
+  );
+  background-image: -webkit-gradient(linear, 0 top, 0 bottom, 
+    from( hsla( 0, 0%, 100%, 0.5 ) ), 
+    to(   hsla( 0, 0%, 100%, 0.0 ) )
+  );
+   -webkit-transition: all .2s .2s ease-in;
+    -moz-transition: all .2s .2s ease-in;
+    -o-transition: all .2s .2s ease-in;
+
+  }
+nav li a:hover {
+  background-color: rgba(43, 197, 218, 0.9);
+  color: rgba(43, 197, 218, 0.3);
+}
+
+nav li a:active {
+  background-color: rgba(30, 153, 169, 0.3);
+  -webkit-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+     -moz-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+       -o-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+          box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+}
+nav li a {
+  border-left:  1px solid hsla( 0, 0%, 100%, 0.3 );
+  border-right: 1px solid hsla( 0, 0%,   0%, 0.2 );
+}
+nav li .left a {
+  background-color: rgba(43, 197, 218, 0.5);
+  position:absolute;
+  border-radius: 7px 0 0 7px;
+  border-left: none;
+  display: inline-block;
+  float:left;
+  padding:1.2em 3em 1.55em .5em;
+  text-align:left;
+  z-index:2;
+}
+
+nav li .top a {
+  border-radius:7px 7px 0px 0;
+  display:block;
+}
+
+nav li .bottom a {
+  border-radius: 0 0px 7px 7px;
+  display:block;
+}
+nav li a.selected {
+  background-color: rgba(43, 197, 218, 0.3);
+  text-shadow: none;
+  color: white;
+}
+
 #home {
-	width:100%;
+    text-align:left;
 	height:auto;
-	padding:10px;
 	font-size:2em;
    -webkit-transition: all 2s ease-in;
     -moz-transition: all 2s ease-in;
@@ -313,28 +405,23 @@ ul#imagenav h1 a{
  color: #a72d1e;
 }
 
-#home nav {
-	position:fixed;
-	top:0px;
-	width:60%;
-	margin:0 20% .3em;
-	opacity:.7;
-   -webkit-transition: all .1s 1s ease-in;
-    -moz-transition: all .1s 1s ease-in;
-    -o-transition: all .1s 1s ease-in;
-  }
 #home:hover nav {
 	opacity:1;
 }
 #home h3 {
 font-style:italic;
 font-family:'Neuton', arial, serif;
-font-size:1em;
-display:inline-block;
-padding:15px 30px;
+font-size:.7em;
+float:right;
+	margin-right:20px;
+	width:130px;
+	margin-top:-110px;
    -webkit-transition: all .1s 1s ease-in;
     -moz-transition: all .1s 1s ease-in;
     -o-transition: all .1s 1s ease-in;
+ -webkit-transform: rotate(270deg);
+    -moz-transform:  rotate(270deg);
+    -o-transform: rotate(270deg);
   }
 
 #home h3:hover {
@@ -356,13 +443,9 @@ padding:15px 30px;
 aside#hub {
 	text-align:left;
 	height:auto;
-	position:fixed;
-	width:100%;
-	margin-left:-20px;
-	bottom:0px;
-	background:grey;
-	padding:20px 20px 20px 40px;
-	z-index:5;
+	width:400px;
+	margin-left:5px;
+	padding:20px;
 }
 
 aside footer {
